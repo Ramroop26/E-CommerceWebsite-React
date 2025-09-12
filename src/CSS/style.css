@@ -1,0 +1,150 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* #topheader{
+    width: 100%;
+    padding: 20px;
+    background-color: lightblue;
+} */
+
+#topmenu
+{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#topshoes
+{
+    display: flex;
+    justify-content: space-between;
+    width: "90%";
+    flex-wrap: wrap;
+}
+
+#mainmenu{
+    width: 100%;
+    height: 50px;
+    display: flex;
+     justify-content: space-between;
+    background-color: rgb(21, 215, 250);
+    color: black;
+}
+/* 
+#navbar{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    color: black;
+ } */
+
+ 
+  #home:hover{
+     color: bisque;
+ }
+  #man:hover{
+     color: bisque;
+ }
+  #women:hover{
+     color: bisque;
+ }
+ #kids:hover{
+     color: bisque;
+ }
+#customize:hover{
+     color: bisque;
+ }
+ #contacts:hover{
+     color: bisque;
+
+ } 
+
+#logo{
+ margin-left: 2%;
+  }
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: navy;
+    text-align: center;
+}
+
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(30, 30, 32);
+    align-items: center;
+    
+}
+#btn{
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
+    width: 10%;
+    height: 40px;
+    border-radius: 20px;
+    border: 0px solid grey;
+}
+#sh{
+    color: rgba(0, 0, 0, 0.61);
+    font-size: 80px;
+}
+#par{
+    color: rgb(211, 31, 31);
+     font-size: 80px;
+}
+
+ #rightmenu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(12, 2, 2);
+    font-size: 10px;
+}
+
+#rightmenu:hover{
+    color: bisque;
+}
+
+#footer
+{
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+
+#adminheader{
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+
+}
+
+#adminwrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
+#leftmenu{
+    width: 11%;
+    background-color: rgb(41, 40, 40);
+    height: 550px;
+    padding: 10px;
+
+}
+
+.adminmenu{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#admindata{
+    width: 85%;
+    padding: 30px;
+
+}
