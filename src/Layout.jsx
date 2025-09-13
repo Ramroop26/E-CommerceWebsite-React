@@ -1,6 +1,6 @@
 import Header from "./component/Header";
-import Manu from "./component/Manu";
-
+import Menu from "./component/Manu";
+import Footer from "./component/Footer";
 import { Outlet } from "react-router-dom";
 
 
@@ -10,10 +10,17 @@ const Layout=()=>{
     return(
 
         <>
-   <Manu/>
-   <Header/>
+   <div id="topNav">
+              <Header/>
+             <Menu/>
+          </div>
+           
+             <hr />
 
-    <Outlet/>
+             <Outlet/>
+
+             <Footer/>
+
   
 
    

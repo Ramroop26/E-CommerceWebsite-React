@@ -1,70 +1,67 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* #topheader{
-    width: 100%;
-    padding: 20px;
-    background-color: lightblue;
-} */
+/* #topheader{ width: 100%; padding: 20px; background-color: lightblue; } */
+#topNav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
 
-#topmenu
-{
+#topmenu {
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-#topshoes
-{
+#topshoes {
     display: flex;
     justify-content: space-between;
     width: "90%";
     flex-wrap: wrap;
 }
 
-#mainmenu{
+#mainmenu {
     width: 100%;
     height: 50px;
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between;
     background-color: rgb(21, 215, 250);
     color: black;
 }
-/* 
-#navbar{
-    display: flex;
-   justify-content: center;
-    align-items: center;
-    color: black;
- } */
 
- 
-  #home:hover{
-     color: bisque;
- }
-  #man:hover{
-     color: bisque;
- }
-  #women:hover{
-     color: bisque;
- }
- #kids:hover{
-     color: bisque;
- }
-#customize:hover{
-     color: bisque;
- }
- #contacts:hover{
-     color: bisque;
+/* #navbar{ display: flex; justify-content: center; align-items: center; color: black; } */
+#home:hover {
+    color: bisque;
+}
 
- } 
+#man:hover {
+    color: bisque;
+}
 
-#logo{
- margin-left: 2%;
-  }
+#women:hover {
+    color: bisque;
+}
+
+#kids:hover {
+    color: bisque;
+}
+
+#customize:hover {
+    color: bisque;
+}
+
+#contacts:hover {
+    color: bisque;
+}
+
+#logo {
+    margin-left: 2%;
+}
 
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -76,9 +73,9 @@ h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(30, 30, 32);
     align-items: center;
-    
 }
-#btn{
+
+#btn {
     background-color: rgba(0, 0, 0, 0.842);
     color: white;
     width: 10%;
@@ -86,30 +83,63 @@ h2 {
     border-radius: 20px;
     border: 0px solid grey;
 }
-#sh{
+
+#sh {
     color: rgba(0, 0, 0, 0.61);
     font-size: 80px;
 }
-#par{
+
+#par {
     color: rgb(211, 31, 31);
-     font-size: 80px;
+    font-size: 80px;
 }
 
- #rightmenu
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(12, 2, 2);
-    font-size: 10px;
-}
-
-#rightmenu:hover{
+#rightmenu:hover {
     color: bisque;
 }
 
-#footer
-{
+#rightmen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  width: 55%;
+  padding: 10px;
+  background-color: rgb(21, 215, 250);
+}
+
+.cart-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon {
+  font-size: 25px;  /* bada dikhane ke liye */
+  color: white;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;      /* upar shift */
+  left: 9px;     /* center me lane ke liye adjust */
+  background: #ff4d4d;
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 50px;  /* fully rounded badge */
+  min-width: 20px;
+  text-align: center;
+}
+
+.cart-text {
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+
+#footer {
     width: 100%;
     height: 100px;
     border-radius: 20px;
@@ -117,34 +147,31 @@ h2 {
     margin-top: 20px;
 }
 
-#adminheader{
+#adminheader {
     width: 100%;
     height: 100px;
     background-color: lightblue;
-
 }
 
-#adminwrapper{
+#adminwrapper {
     display: flex;
     justify-content: space-between;
-
 }
-#leftmenu{
+
+#leftmenu {
     width: 11%;
     background-color: rgb(41, 40, 40);
     height: 550px;
     padding: 10px;
-
 }
 
-.adminmenu{
+.adminmenu {
     color: white;
     font-weight: bold;
     text-decoration: none;
 }
 
-#admindata{
+#admindata {
     width: 85%;
     padding: 30px;
-
 }

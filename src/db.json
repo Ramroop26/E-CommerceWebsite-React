@@ -1,19 +1,11 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Digital Watch",
-      "brand": "Titan",
-      "category": "womens",
-      "price": 20000,
-      "images": "dfghfdhfghf"
-    },
-    {
       "id": "7ae9",
-      "name": "shoe2",
+      "name": "CAMP CLINT Sneakers",
       "brand": "sonta",
       "category": "men",
-      "price": "40000",
+      "price": "450",
       "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757613763/qzkc3th69ezuthyqvbzm.webp"
     },
     {
@@ -23,6 +15,55 @@
       "category": "men",
       "price": "400",
       "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757614237/wi9vvdmir9asx1ljq43c.webp"
+    },
+    {
+      "id": "8f93",
+      "name": "Combo Pack of 2 Casual Shoes Sneakers For Men  (Multicolor , 9)",
+      "brand": "nike",
+      "category": "male",
+      "price": "400",
+      "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757702363/ctld48v15to0sj3azrjm.webp"
+    },
+    {
+      "id": "cc33",
+      "name": "Premium Men Casual Shoes Pack Of 2 Sneakers For Men  (Grey, Green, Yellow , 9)",
+      "brand": "Adidas",
+      "category": "male",
+      "price": "458",
+      "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757702556/vmqofmza5l6lbxgbyrod.webp"
+    },
+    {
+      "id": "c27d",
+      "name": "Premium Men Casual Shoes Pack Of 2 Sneakers For Men  (Grey, Green, Yellow , 9)",
+      "brand": "brooks",
+      "category": "male",
+      "price": "300",
+      "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757702638/fu5z8mwrej6ja4ele71d.webp"
+    },
+    {
+      "id": "5ef3",
+      "name": "SMOKE Training & Gym Shoes For Men  (White, Grey , 7)",
+      "brand": "Altra",
+      "category": "male",
+      "price": "458",
+      "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757702836/yi2rzkradsvwfvcg0ppd.webp"
+    },
+    {
+      "id": "2a6d",
+      "name": "Mesh |Lightweight|Comfort|Summer|Trendy|Walking|Outdoor",
+      "brand": "nike",
+      "category": "male",
+      "price": "300",
+      "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757703154/xaz0blljylzfvawrxddg.webp"
+    },
+    
+    {
+      "id": "15e3",
+      "name": "BRUTON Velox-740 Chunky Sneakers Shoes",
+      "brand": "nike",
+      "category": "male",
+      "price": "400",
+      "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757703268/n8aiqiux58gnfm8yoha5.webp"
     }
   ],
   "admin": [
