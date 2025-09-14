@@ -9,9 +9,12 @@ import Modal from 'react-bootstrap/Modal';
 
 import Form from 'react-bootstrap/Form';
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
 
+import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../CSS/Manu.css";
 
 
 
@@ -22,7 +25,12 @@ const Menu = () => {
   const [password, setPassword] = useState("");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+  
+
+  const CartData= useSelector(state=>state.mycart.cart);
+  const CartLength= CartData.length;
+  
 
 
 
@@ -59,7 +67,8 @@ const Menu = () => {
           <Navbar >
             <Container >
               <Nav className="me-auto">
-                <Nav.Link href="#home" id='home'>Home</Nav.Link>
+                
+                <Nav.Link as={Link} to="home" id='home'>Home</Nav.Link>
                 <Nav.Link href="#man" id='man'>Man</Nav.Link>
                 <Nav.Link href="#women" id='women'>Women</Nav.Link>
                 <Nav.Link href="#kids" id='kids'>Kids</Nav.Link>
@@ -72,8 +81,8 @@ const Menu = () => {
 
         <div id="rightmen">
           <div className="cart-wrapper">
-            <FaShoppingCart className="cart-icon" />
-            <span className="cart-count">0</span>
+            <FaShoppingCart className="cart-icon" onClick={()=>{navigate("/mycart")}} style={{cursor:"pointer"}}  />
+            <span className="cart-count">{CartLength}</span>
           </div>
           <span className="cart-text">Cart</span>
         </div>
@@ -83,7 +92,7 @@ const Menu = () => {
         <div id='adminbtn'>
           <Button
             onClick={handleShow}
-            style={{  backgroundColor: "rgb(21, 215, 250)", border: "0px solid grey", color: "white", position: "relative", top: "5px" }} >
+            style={{   color: "white", position: "relative", backgroundColor:"black" }} >
             Admin Login
           </Button>
         </div>

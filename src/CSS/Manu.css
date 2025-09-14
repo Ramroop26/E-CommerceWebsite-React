@@ -1,0 +1,69 @@
+/* Menu.css */
+
+#mainmenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 30px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#logo img {
+  cursor: pointer;
+}
+
+#navbar .nav-link {
+  margin-right: 15px;
+  font-weight: 500;
+  color: white !important;
+  transition: color 0.2s ease;
+}
+
+#navbar .nav-link:hover,
+#navbar .nav-link.active {
+  color: #007bff !important;
+}
+
+#rightmen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-wrapper {
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 28px;
+  color: #007bff;
+  top: -4px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.cart-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Admin Button */
+#adminbtn button {
+ border:#007bff;
+  width: 120%;
+  font-weight: 700;
+  
+}
