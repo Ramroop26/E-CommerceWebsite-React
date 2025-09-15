@@ -28,28 +28,28 @@ const Home = () => {
   useEffect(() => {
     loadData();
   }, [])
-const ans= mydata.map((key)=>{
-   return(
-    <>
-        <Card style={{ width: '18rem', margin:"10px" }}>
-      <Card.Img variant="top" src={key.images}  height="200" />
-      <Card.Body>
-        <Card.Title>{key.brand}</Card.Title>
-        <Card.Text>
-           {key.name}
-           <br />
-           <span style={{color:"red"}}>Category : {key.category}</span> 
-           <br />
-           <span style={{color:"navy" , fontWeight:"bold"}}>Price : {key.price}</span> 
-        </Card.Text>
-              <Button variant="primary" 
-              onClick={()=>{dispatch(addTocart({id:key.id, name:key.name, brand:key.brand, category:key.category, price:key.price, images:key.images, qnty:1}))}}>Add To Cart</Button>
-      </Card.Body>
-    </Card>
+  const ans = mydata.map((key) => {
+    return (
+      <>
+        <Card style={{ width: '18rem', margin: "10px" }}>
+          <Card.Img variant="top" src={key.images} height="200" />
+          <Card.Body>
+            <Card.Title>{key.brand}</Card.Title>
+            <Card.Text>
+              {key.name}
+              <br />
+              <span style={{ color: "red" }}>Category : {key.category}</span>
+              <br />
+              <span style={{ color: "navy", fontWeight: "bold" }}>Price : {key.price}</span>
+            </Card.Text>
+            <Button variant="primary"
+              onClick={() => { dispatch(addTocart({ id: key.id, name: key.name, brand: key.brand, category: key.category, price: key.price, images: key.images, qnty: 1 })) }}>Add To Cart</Button>
+          </Card.Body>
+        </Card>
 
-    </>
-   )
-})
+      </>
+    )
+  })
 
 
   return (
@@ -87,7 +87,7 @@ const ans= mydata.map((key)=>{
             <button id='btn'>Buy Now</button>
           </Carousel.Caption>
         </Carousel.Item>
-        
+
         <Carousel.Item>
           <img src={ban6} width="100%" height="500" />
           <Carousel.Caption>
@@ -98,8 +98,15 @@ const ans= mydata.map((key)=>{
         </Carousel.Item>
       </Carousel>
 
-      <h1>Nike Shoe Store</h1>
+      <marquee behavior="scroll" direction="left" scrollAmount="6" style={{ color: "white", background: "black", fontSize: "20px", padding: "10px", fontWeight: "bold" }}
+      >
+        🔥 New Arrivals: Nike Air Max 2025 | ⚡ Flat 20% Off on Running Shoes | 👟 Limited Edition Jordans Available Now | 🚚 Free Delivery on Orders Above ₹2000
+      </marquee>
+
+
+      <h3>Nike Shoe Store</h3>
       <h1> Out Top Collections</h1>
+
 
 
 
