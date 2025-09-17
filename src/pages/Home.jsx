@@ -19,7 +19,9 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const loadData = async () => {
-    let api = "http://localhost:3000/products";
+
+    // let api=`${import.meta.env.VITE_API_URL}/products`;
+    let api = "http://localhost:3000/products"
     const response = await axios.get(api);
     console.log(response.data);
     setMydata(response.data);
@@ -98,7 +100,7 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
-      <marquee behavior="scroll" direction="left" scrollAmount="6" style={{ color: "white", background: "black", fontSize: "20px", padding: "10px", fontWeight: "bold" }}
+      <marquee behavior="scroll" direction="left" scrollAmount="6" style={{ color: "#00ffff", background: "black", fontSize: "20px", padding: "10px", fontWeight: "bold"}}
       >
         🔥 New Arrivals: Nike Air Max 2025 | ⚡ Flat 20% Off on Running Shoes | 👟 Limited Edition Jordans Available Now | 🚚 Free Delivery on Orders Above ₹2000
       </marquee>

@@ -35,7 +35,7 @@ const AddProduct = () => {
     const response = await axios.post(CloudAPI, formData);
     console.log(response.data);
     console.log(response.data.url);
-    let api = "http://localhost:3000/products";
+    let api=`${import.meta.env.VITE_API_URL}/products`;
     const res = await axios.post(api,{...input, images:response.data.url});
     console.log(res.data);
     toast.success("Data Successfully Save !!!");
