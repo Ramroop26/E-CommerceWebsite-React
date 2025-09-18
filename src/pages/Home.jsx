@@ -12,6 +12,9 @@ import { useDispatch } from 'react-redux';
 import { addTocart } from '../cartSlice';
 import "../CSS/Home.css";
 
+import { ToastContainer, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Home = () => {
@@ -46,6 +49,19 @@ const Home = () => {
             </Card.Text>
             <Button variant="primary"
               onClick={() => { dispatch(addTocart({ id: key.id, name: key.name, brand: key.brand, category: key.category, price: key.price, images: key.images, qnty: 1 })) }}>Add To Cart</Button>
+              <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick={false}
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+              transition={Bounce}/>
+
           </Card.Body>
         </Card>
 
@@ -96,14 +112,16 @@ const Home = () => {
             <h2>Nike Shoe Store</h2>
             <h1> <b id='sh'>Shoe</b> <b id='par'>Collections</b></h1>
             <button id='btn'>Buy Now</button>
+
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 
-      <marquee behavior="scroll" direction="left" scrollAmount="6" style={{ color: "#00ffff", background: "black", fontSize: "20px", padding: "10px", fontWeight: "bold"}}
-      >
-        🔥 New Arrivals: Nike Air Max 2025 | ⚡ Flat 20% Off on Running Shoes | 👟 Limited Edition Jordans Available Now | 🚚 Free Delivery on Orders Above ₹2000
-      </marquee>
+      <div className="marquee-container">
+  <div className="marquee-content">
+    🔥 New Arrivals: Nike Air Max 2025 | ⚡ Flat 20% Off on Running Shoes | 👟 Limited Edition Jordans Available Now | 🚚 Free Delivery on Orders Above ₹2000
+  </div>
+</div>
 
 
       <h3>Nike Shoe Store</h3>

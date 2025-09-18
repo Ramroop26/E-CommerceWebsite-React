@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const cartSlice = createSlice({
   name: "mycart",
@@ -10,7 +12,18 @@ const cartSlice = createSlice({
     addTocart: (state, actions) => {
       const status = state.cart.filter((key) => key.id == actions.payload.id);
       if (status.length >= 1) {
-        alert("Product Already Added!");
+       
+toast('Product Already Added!', {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",transition: Bounce,
+});
+
       } else {
         state.cart.push(actions.payload);
       }
@@ -65,6 +78,6 @@ const cartSlice = createSlice({
   }
 });
 
-export const { addTocart, incQunty, decQunty, order, cartDataRemove } =
-  cartSlice.actions;
+
+export const { addTocart, incQunty, decQunty, order, cartDataRemove } = cartSlice.actions;
 export default cartSlice.reducer;

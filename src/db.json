@@ -96,6 +96,7 @@
       "price": "4500",
       "images": "http://res.cloudinary.com/dkm5xgamv/image/upload/v1757906119/mzdlupopoqrik37j73ci.webp"
     }
+    
   ],
   "admin": [
     {
@@ -164,6 +165,48 @@
       "contactNo": "4567891323",
       "pinCode": "45612",
       "date": "2025-09-17",
+      "products": "Downshifter 13 Running Shoes For Women  (Black , 7), Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Grey , 10), Promina Walking Shoes For Men  (Black , 6)",
+      "totalAmount": 5680
+    },
+    {
+      "id": "0ff9",
+      "products": "Run Defy Running Shoes For Men  (Black , 11), Revolution 8 Running Shoes For Men  (Green , 11), Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Black , 12)#JustHere, Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Grey , 10)",
+      "totalAmount": 10180
+    },
+    {
+      "id": "068e",
+      "products": "Run Defy Running Shoes For Men  (Black , 11), Revolution 8 Running Shoes For Men  (Green , 11), Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Black , 12)#JustHere, Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Grey , 10)",
+      "totalAmount": 10180
+    },
+    {
+      "id": "b40d",
+      "products": "Run Defy Running Shoes For Men  (Black , 11), Revolution 8 Running Shoes For Men  (Green , 11), Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Black , 12)#JustHere, Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Grey , 10)",
+      "totalAmount": 10180
+    },
+    {
+      "id": "b006",
+      "products": "Run Defy Running Shoes For Men  (Black , 11), Revolution 8 Running Shoes For Men  (Green , 11), Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Black , 12)#JustHere, Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Grey , 10)",
+      "totalAmount": 10180
+    },
+    {
+      "id": "362f",
+      "name": "Ramroop Prajapati",
+      "city": "indore",
+      "address": "adsxj",
+      "contactNo": "4567891323",
+      "pinCode": "45612",
+      "date": "2025-09-19",
+      "products": "Downshifter 13 Running Shoes For Women  (Black , 7), Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Grey , 10), Promina Walking Shoes For Men  (Black , 6)",
+      "totalAmount": 5680
+    },
+    {
+      "id": "2864",
+      "name": "Ramroop Prajapati",
+      "city": "indore",
+      "address": "adsxj",
+      "contactNo": "4567891323",
+      "pinCode": "45612",
+      "date": "2025-09-18",
       "products": "Downshifter 13 Running Shoes For Women  (Black , 7), Legend Essential 3 Next Nature Training & Gym Shoes For Men  (Grey , 10), Promina Walking Shoes For Men  (Black , 6)",
       "totalAmount": 5680
     }

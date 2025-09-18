@@ -16,6 +16,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../CSS/Manu.css";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Menu = () => {
@@ -44,13 +46,14 @@ const Menu = () => {
     if (response.data.length >= 1) {
       if (response.data[0].password == password) {
         navigate("/admin")
+        handleClose();
       }
       else {
-        alert("Invalid Password");
+        toast.error("Invalid Password");
       }
     }
     else {
-      alert("Invalid Email!");
+      toast.error("Invalid Email!");
     }
   }
 
@@ -90,12 +93,21 @@ const Menu = () => {
 
 
         <div id='adminbtn'>
-          <Button
-            onClick={handleShow}
-            style={{   color: "white", position: "relative", backgroundColor:"rgb(28, 28, 28)" }} >
-            Admin Login
-          </Button>
-        </div>
+  <Button
+    onClick={handleShow}
+    style={{ 
+      color: "white", 
+      backgroundColor: "black", // apna color
+      border: "none",
+      borderRadius: "6px",
+      padding: "8px 20px",
+      fontWeight: "bold",
+      position: "relative"
+    }} >
+    Admin Login
+  </Button>
+</div>
+
 
 
       </div>
@@ -120,6 +132,7 @@ const Menu = () => {
             <Button variant="primary" type="submit" onClick={handleSubmit}>
               Login
             </Button>
+              <ToastContainer />
           </Form>
 
 

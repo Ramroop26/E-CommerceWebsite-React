@@ -118,3 +118,38 @@ h1 {
 .card .btn-primary:hover {
   background-color: #0056b3;
 }
+
+
+
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  background: linear-gradient(135deg, #111, #1a1a40, #ff0080, #ffcc00, #1877f2);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+/* Scroll animation */
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

@@ -30,7 +30,7 @@
     height: 50px;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(28, 28, 28);
+background: linear-gradient(135deg, #111, #1a1a40, #ff0080, #ffcc00, #1877f2);
     color: white;
 }
 
@@ -65,8 +65,9 @@
 
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: navy;
+    color: lightgreen;
     text-align: center;
+    font-size: 4rem;
 }
 
 h2 {

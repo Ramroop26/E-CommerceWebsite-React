@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../CSS/AddProduct.css';
 
@@ -35,10 +35,21 @@ const AddProduct = () => {
     const response = await axios.post(CloudAPI, formData);
     console.log(response.data);
     console.log(response.data.url);
-    let api=`${import.meta.env.VITE_API_URL}/products`;
+    // let api=`${import.meta.env.VITE_API_URL}/products`;
+    let api = "http://localhost:3000/products";
     const res = await axios.post(api,{...input, images:response.data.url});
     console.log(res.data);
-    toast.success("Data Successfully Save !!!");
+    
+    toast('Data Successfully Save !!!', {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",transition: Bounce,
+});
   }
 
 
@@ -87,7 +98,18 @@ const AddProduct = () => {
 
         <Button variant="primary" type="submit" onClick={handleSubmit}> Submit</Button>
       </Form>
-      <ToastContainer />
+      <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick={false}
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+              transition={Bounce}/>
     </>
   )
 }
