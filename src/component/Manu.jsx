@@ -16,8 +16,11 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../CSS/Manu.css";
 
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useDispatch } from "react-redux";
+import { clearCart } from "../cartSlice";
+
 
 
 const Menu = () => {
@@ -26,9 +29,10 @@ const Menu = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
     const navigate = useNavigate();
   
+const dispatch = useDispatch();
 
   const CartData= useSelector(state=>state.mycart.cart);
   const CartLength= CartData.length;
@@ -47,6 +51,16 @@ const Menu = () => {
       if (response.data[0].password == password) {
         navigate("/admin")
         handleClose();
+        toast("Order Successfully Placed !!!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+        transition: Bounce,
+      });
       }
       else {
         toast.error("Invalid Password");
@@ -71,12 +85,12 @@ const Menu = () => {
             <Container >
               <Nav className="me-auto">
                 
-                <Nav.Link as={Link} to="home" id='home'>Home</Nav.Link>
-                <Nav.Link href="#man" id='man'>Man</Nav.Link>
-                <Nav.Link href="#women" id='women'>Women</Nav.Link>
-                <Nav.Link href="#kids" id='kids'>Kids</Nav.Link>
-                <Nav.Link href="#customize" id='customize'>Customize</Nav.Link>
-                <Nav.Link href="#contact" id='contacts'>Contacts</Nav.Link>
+                <Nav.Link  as={Link}  to="home"  id='home'  onClick={() => dispatch(clearCart())}>  Home</Nav.Link>
+                <Nav.Link href="/man" id='man'>Man</Nav.Link>
+                <Nav.Link href="/women" id='women'>Women</Nav.Link>
+                <Nav.Link href="/kids" id='kids'>Kids</Nav.Link>
+                <Nav.Link href="/customize" id='customize'>Customize</Nav.Link>
+                <Nav.Link href="/contact" id='contacts'>Contacts</Nav.Link>
               </Nav>
             </Container>
           </Navbar>
@@ -90,27 +104,25 @@ const Menu = () => {
           <span className="cart-text">Cart</span>
         </div>
 
-
-
-        <div id='adminbtn'>
-  <Button
-    onClick={handleShow}
-    style={{ 
-      color: "white", 
-      backgroundColor: "black", // apna color
-      border: "none",
-      borderRadius: "6px",
-      padding: "8px 20px",
-      fontWeight: "bold",
-      position: "relative"
-    }} >
-    Admin Login
-  </Button>
+        <div>
+  <Nav.Link as={Link} to="/login" id="login">Login</Nav.Link>
 </div>
 
 
 
+{/* 
+        <div id='adminbtn'>
+  <Button
+    onClick={handleShow} >
+    Admin Login
+  </Button>
+</div> */}
+
+
+
       </div>
+
+      
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -132,7 +144,8 @@ const Menu = () => {
             <Button variant="primary" type="submit" onClick={handleSubmit}>
               Login
             </Button>
-              <ToastContainer />
+   
+             
           </Form>
 
 

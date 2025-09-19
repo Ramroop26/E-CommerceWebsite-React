@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
-import { ToastContainer, toast, Bounce } from 'react-toastify';
+import {  toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../CSS/AddProduct.css';
 
@@ -98,18 +98,7 @@ theme: "light",transition: Bounce,
 
         <Button variant="primary" type="submit" onClick={handleSubmit}> Submit</Button>
       </Form>
-      <ToastContainer
-              position="top-right"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick={false}
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="light"
-              transition={Bounce}/>
+     
     </>
   )
 }

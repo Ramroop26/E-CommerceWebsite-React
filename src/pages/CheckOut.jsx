@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
 
+import {  toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const CheckOut = () => {
   const navigate = useNavigate();
@@ -31,7 +34,16 @@ const CheckOut = () => {
       let api = "http://localhost:3000/ClientOrder";
       const response = await axios.post(api, { ...input, products: products,totalAmount: totalAmount, });
       console.log("Order saved:", response.data);
-   
+       toast('Order Successfull Place !!!', {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",transition: Bounce,
+});
 
     navigate("/paydone"); // ✅ navigate only after success
     

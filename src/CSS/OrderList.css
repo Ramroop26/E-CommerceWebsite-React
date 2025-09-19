@@ -2,6 +2,7 @@
 .order-list-container {
   padding: 30px;
   background-color: #f1f3f5;
+  
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -44,6 +45,7 @@
   font-size: 14px;
   vertical-align: middle;
   border-top: 1px solid #dee2e6;
+  
 }
 
 /* === Hover Effect === */

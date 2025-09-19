@@ -11,14 +11,14 @@ const AdminDashBoard=()=>{
     return(
         <>
         <div id="adminheader">
-              <marquee behavior="" direction="" style={{color:"blue"}}>Welcome To Admin DashBoard</marquee>
+              <marquee behavior="" direction="" >Welcome To Admin DashBoard</marquee>
            </div>
            <div id="adminwrapper">
               <div id="leftmenu"> 
                    
                <Link to="addproduct" className="adminmenu">  Upload Product </Link>
                <Link to="orderlist" className="adminmenu">Oder List</Link> 
-               <Link to="/" className="adminmenu">LogOut</Link>   
+               <Link to="/home" className="adminmenu">LogOut</Link>   
 
 
               </div>

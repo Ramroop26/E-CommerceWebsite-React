@@ -6,23 +6,28 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "../CSS/Home.css";
 
-const Man = () => {
+const Women = () => {
   const [mydata, setMydata] = useState([]);
   const dispatch = useDispatch();
 
   const loadData = async () => {
-    let api = "http://localhost:3000/products";
-    const response = await axios.get(api);
-    setMydata(response.data);
+    try {
+      let api = "http://localhost:3000/products";
+      const response = await axios.get(api);
+      console.log("API Data:", response.data);
+      setMydata(response.data);
+    } catch (error) {
+      console.error("API Error:", error.message);
+    }
   };
 
   useEffect(() => {
     loadData();
   }, []);
 
-  // सिर्फ men category वाले products
-  const manProducts = mydata
-    .filter((item) => item.category.toLowerCase() === "man")
+  // सिर्फ women category वाले products
+  const womenProducts = mydata
+    .filter((item) => item.category.toLowerCase() === "women")
     .map((key) => (
       <Card style={{ width: "18rem", margin: "10px" }} key={key.id}>
         <Card.Img variant="top" src={key.images} height="200" />
@@ -62,16 +67,16 @@ const Man = () => {
   return (
     <>
       <h2 style={{ textAlign: "center", margin: "20px 0" }}>
-        👟 Men Collection
+        👠 Women Collection
       </h2>
       <div
         id="topshoes"
         style={{ width: "90%", margin: "auto", display: "flex", flexWrap: "wrap" }}
       >
-        {manProducts.length > 0 ? manProducts : <h4>No Men Products Found</h4>}
+        {womenProducts.length > 0 ? womenProducts : <h4>No Women Products Found</h4>}
       </div>
     </>
   );
 };
 
-export default Man;
+export default Women;

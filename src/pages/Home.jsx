@@ -12,8 +12,7 @@ import { useDispatch } from 'react-redux';
 import { addTocart } from '../cartSlice';
 import "../CSS/Home.css";
 
-import { ToastContainer, Bounce } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -49,18 +48,7 @@ const Home = () => {
             </Card.Text>
             <Button variant="primary"
               onClick={() => { dispatch(addTocart({ id: key.id, name: key.name, brand: key.brand, category: key.category, price: key.price, images: key.images, qnty: 1 })) }}>Add To Cart</Button>
-              <ToastContainer
-              position="top-right"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick={false}
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="light"
-              transition={Bounce}/>
+             
 
           </Card.Body>
         </Card>
