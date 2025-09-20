@@ -111,96 +111,48 @@
       "password": "raj123"
     }
   ],
-  "login": [
-    {
-      "id": "1",
-      "loginid": "",
-      "password": ""
-    },
-    {
-      "id": "e8f2"
-    },
-    {
-      "id": "9051"
-    },
-    {
-      "id": "0f01",
-      "email": "admin@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "8559",
-      "email": "admin@gmail.com",
-      "password": "1234"
-    }
-  ],
   "registration": [
     {
       "id": "1",
-      "loginname": "",
-      "loginid": "",
-      "password": ""
+      "Username": "",
+      "email id": "",
+      "password": "",
+      "confirmpassword": ""
     },
     {
-      "id": "e06b"
-    },
-    {
-      "id": "8374",
-      "name": "Ramroop Prajapati",
+      "id": "78f2",
       "email": "ramroopp26@gmail.com",
       "password": "1234"
     },
     {
-      "id": "08f7",
-      "name": "Ramroop Prajapati",
+      "id": "f27f",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "0e90",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "502d",
+      "name": "Ramroop",
+      "email": "ramroopp26@gmail.com",
+      "password": "1234",
+      "confirmpassword": "1234"
+    },
+    {
+      "id": "562d",
       "email": "ramroopp26@gmail.com",
       "password": "1234"
     },
     {
-      "id": "d09d",
-      "name": "Ramroop Prajapati",
-      "email": "ramroopp26@gmail.com",
+      "id": "da6a",
+      "email": "admin@gmail.com",
       "password": "1234"
     },
     {
-      "id": "4994",
-      "name": "Ramroop Prajapati",
-      "email": "ramroopp26@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "20d7",
-      "name": "Ramroop Prajapati",
-      "email": "ramroopp26@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "edb8",
-      "name": "Ramroop Prajapati",
-      "email": "ramroopp26@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "c294",
-      "name": "Ramroop Prajapati",
-      "email": "ramroopp26@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "3af9",
-      "name": "Ramroop Prajapati",
-      "email": "ramroopp26@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "2494",
-      "name": "Ramroop Prajapati",
-      "email": "ramroopp26@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "abe4",
-      "name": "Ramroop Prajapati",
+      "id": "4c51",
       "email": "ramroopp26@gmail.com",
       "password": "1234"
     }

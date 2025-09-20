@@ -8,6 +8,7 @@ import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addTocart } from '../cartSlice';
 import "../CSS/Home.css";
@@ -19,6 +20,10 @@ import "../CSS/Home.css";
 const Home = () => {
   const [mydata, setMydata] = useState([]);
   const dispatch = useDispatch();
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const navigate = useNavigate();
+
+
 
   const loadData = async () => {
 
@@ -47,7 +52,12 @@ const Home = () => {
               <span style={{ color: "navy", fontWeight: "bold" }}>Price : {key.price}</span>
             </Card.Text>
             <Button variant="primary"
-              onClick={() => { dispatch(addTocart({ id: key.id, name: key.name, brand: key.brand, category: key.category, price: key.price, images: key.images, qnty: 1 })) }}>Add To Cart</Button>
+              onClick={() => {
+                if (!isLoggedIn) {
+      navigate("/login"); // Redirect to login page
+      return;
+    }
+                 dispatch(addTocart({ id: key.id, name: key.name, brand: key.brand, category: key.category, price: key.price, images: key.images, qnty: 1 })) }}>Add To Cart</Button>
              
 
           </Card.Body>
@@ -64,24 +74,24 @@ const Home = () => {
         <Carousel.Item>
           <img src={ban1} width="100%" height="500" />
           <Carousel.Caption>
-            <h2>Nike Shoe Store</h2>
-            <h1> <b id='sh'>Shoe</b> <b id='par'>Collections</b></h1>
+            <h2>Nike Shoes Store</h2>
+            <h1> <b id='sh'>Shoes</b> <b id='par'>Collections</b></h1>
             <button id='btn'>Buy Now</button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img src={ban2} width="100%" height="500" />
           <Carousel.Caption>
-            <h2>Nike Shoe Store</h2>
-            <h1> <b id='sh'>Shoe</b> <b id='par'>Collections</b></h1>
+            <h2>Nike Shoes Store</h2>
+            <h1> <b id='sh'>Shoes</b> <b id='par'>Collections</b></h1>
             <button id='btn'>Buy Now</button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img src={ban3} width="100%" height="500" />
           <Carousel.Caption>
-            <h2>Nike Shoe Store</h2>
-            <h1> <b id='sh'>Shoe</b> <b id='par'>Collections</b></h1>
+            <h2>Nike Shoes Store</h2>
+            <h1> <b id='sh'>Shoes</b> <b id='par'>Collections</b></h1>
             <button id='btn'>Buy Now</button>
           </Carousel.Caption>
         </Carousel.Item>
@@ -89,7 +99,7 @@ const Home = () => {
           <img src={ban4} width="100%" height="500" />
           <Carousel.Caption>
             <h2>Nike Shoe Store</h2>
-            <h1> <b id='sh'>Shoe</b> <b id='par'>Collections</b></h1>
+            <h1> <b id='sh'>Shoes</b> <b id='par'>Collections</b></h1>
             <button id='btn'>Buy Now</button>
           </Carousel.Caption>
         </Carousel.Item>
@@ -97,7 +107,7 @@ const Home = () => {
         <Carousel.Item>
           <img src={ban6} width="100%" height="500" />
           <Carousel.Caption>
-            <h2>Nike Shoe Store</h2>
+            <h2>Nike Shoes Store</h2>
             <h1> <b id='sh'>Shoe</b> <b id='par'>Collections</b></h1>
             <button id='btn'>Buy Now</button>
 
@@ -112,7 +122,7 @@ const Home = () => {
 </div>
 
 
-      <h3>Nike Shoe Store</h3>
+      <h3>Nike Shoes Store</h3>
       <h1> Out Top Collections</h1>
 
 

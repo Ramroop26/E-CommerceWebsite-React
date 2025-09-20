@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { addTocart } from '../cartSlice';
 import "../CSS/Home.css";
 
-const Women = () => {
+const Kids= () => {
   const [mydata, setMydata] = useState([]);
   const dispatch = useDispatch();
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
@@ -70,7 +70,7 @@ const Women = () => {
   return (
     <>
       
-      <h3>Nike Women Shoes Store</h3>
+      <h3>Nike Kids Shoes Store</h3>
       <h1> 👟Out Top Collections</h1>
       <div id='topshoes' style={{ width: "90%", margin: "auto", display: "flex", flexWrap: "wrap" }}>
         {ans.length > 0 ? ans : <p>No products found.</p>}
@@ -79,4 +79,4 @@ const Women = () => {
   );
 };
 
-export default Women;
+export default Kids;

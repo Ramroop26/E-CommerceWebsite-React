@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Home from "./pages/Home";
 import Man from "./pages/Man";
+import Women from './pages/Women';
+import Kids from './pages/Kids';
+import Contacts from './pages/Contacts';
 import AdminDashBoard from './AdminDashBoard';
 import AddProduct from './adminpages/AddProduct';
 import MyCart from './pages/MyCart';
@@ -11,7 +14,8 @@ import OrderList from './adminpages/OrderList';
 
 import { ToastContainer, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-// import Login from './loginpages/Login';
+import Login from './loginpages/Login';
+
 
 const App = () => {
   return (
@@ -23,6 +27,10 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
             <Route path="man" element={<Man />} />
+            <Route path="women" element={<Women />} />
+            <Route path="kids" element={<Kids />} />
+            <Route path="contacts" element={<Contacts />} />
+
             <Route path="mycart" element={<MyCart />} />
             <Route path="checkout" element={<CheckOut />} />
             <Route path="paydone" element={<PaymentDone />} />
@@ -39,7 +47,7 @@ const App = () => {
             <Route path="orderlist" element={<OrderList />} />
           </Route>
 
-          {/* <Route path="/login" element={<Login/>}/>  */}
+          <Route path="/login" element={<Login/>}/> 
 
                       
         </Routes>

@@ -20,6 +20,8 @@ import {  toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from "react-redux";
 import { clearCart } from "../cartSlice";
+import { FaUserShield } from "react-icons/fa";
+
 
 
 
@@ -29,10 +31,14 @@ const Menu = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true);
     const navigate = useNavigate();
   
 const dispatch = useDispatch();
+const [isLoggedIn, setIsLoggedIn] = useState(() => {
+  return localStorage.getItem('isLoggedIn') === 'true';
+});
+
 
   const CartData= useSelector(state=>state.mycart.cart);
   const CartLength= CartData.length;
@@ -104,19 +110,44 @@ const dispatch = useDispatch();
           <span className="cart-text">Cart</span>
         </div>
 
-        <div>
-  <Nav.Link as={Link} to="/login" id="login">Login</Nav.Link>
+      <div>
+  {isLoggedIn ? (
+    <Nav.Link
+      onClick={() => {
+        // ✅ Logout handler
+        setIsLoggedIn(false);
+        localStorage.removeItem('isLoggedIn'); // Clear saved login
+        navigate('/'); // Redirect to login page
+        toast.success("Logged out successfully!");
+      }}
+      id="logout"
+    >
+      Logout
+    </Nav.Link>
+  ) : (
+    <Nav.Link
+      as={Link}
+      to="/login"
+      id="login"
+      onClick={() => {
+        // Optionally set login on manual login navigation
+        // setIsLoggedIn(true); <-- only if you're not handling this in the login page
+      }}
+    >
+      Login
+    </Nav.Link>
+  )}
 </div>
 
 
 
-{/* 
-        <div id='adminbtn'>
-  <Button
-    onClick={handleShow} >
-    Admin Login
+
+      <div id='adminbtn'>
+  <Button onClick={handleShow} >
+    <FaUserShield style={{ marginRight: "5px" }} />
+   
   </Button>
-</div> */}
+</div>
 
 
 
@@ -133,12 +164,12 @@ const dispatch = useDispatch();
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" name="email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+              <Form.Control type="email" name="email" value={email} onChange={(e) => { setEmail(e.target.value) }}  placeholder='Enter Your Email'/>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" name="password" value={password} onChange={(e) => { setPassword(e.target.value) }} />
+              <Form.Control type="password" name="password" value={password} onChange={(e) => { setPassword(e.target.value) }} placeholder='Enter  Your Password' />
             </Form.Group>
 
             <Button variant="primary" type="submit" onClick={handleSubmit}>
@@ -150,11 +181,7 @@ const dispatch = useDispatch();
 
 
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
+        
       </Modal>
 
 
